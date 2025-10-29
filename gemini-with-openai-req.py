@@ -13,6 +13,6 @@ response = client.chat.completions.create(
     model="gemini-2.5-flash", messages=[{"role": "user", "content": "Hey There"}]
 )
 
-message_response = response.choices[0].message
+output_message = response.choices[0].message.content
 
-print(message_response)
+print(output_message)
