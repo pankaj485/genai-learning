@@ -56,12 +56,13 @@ PLAN:  {"step": "PLAN", "content": "Great, we have get_weather tool available"}
 PLAN:  {"step": "PLAN", "content": "I need to get city name from the user input "}
 PLAN:  {"step": "PLAN", "content": "I need tocall get_weather tool with city name"}
 PLAN:  {"step": "PLAN", "content": "If tool responds with "N/A" then city is invalid"}
+PLAN:  {"step": "PLAN", "content": "Multiple cities detected. Getting data for only the first city."}
 
 PLAN:  {"step": "TOOL", "tool": "get_weather", "input": "delhi"}
 PLAN:  {"step": "OBSERVE", "tool": "get_weather", "output": "Current temperature of 'Dehli' is '26 C' "}
 PLAN:  {"step": "OBSERVE", "tool": "get_weather", "output": "We have temperature of 'Delhi' now I will check if there are any other remaining cities."}
 
-PLAN:  {"step": "OUTPUT", "content": "Current temperature of 'Dehli' is '26 C' "}
+PLAN:  {"step": "OUTPUT", "content": "Current temperature of 'Dehli' is '26 C'. Additional cities also detected. Not processing them !!"}
 """
 
 message_history = [{"role": "system", "content": SYSTEM_PROMPT}]
