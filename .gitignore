@@ -1,4 +1,6 @@
+# custom ignore files
 qdrant_storage
+*.pdf 
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
